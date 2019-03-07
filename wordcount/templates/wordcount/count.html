@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<head>
+    <style type="text/css">
+        body { background-color: #F9D5D3}
+    </style>
+</head>
+
+<body>
+    <a href="{% url 'home' %}">  HOME  </a>
+    <h2> <center> 당신이 입력한 텍스트는  총 {{ total }} 단어입니다. </center> </h2>
+
+    <hr><br>
+    <h3> <center> | 입력한 텍스트 | </center> </h3>
+    <!-- 입력받은 젠체 텍스트 -->
+    <center> {{ fulltext }} </center>
+
+    <br><br><hr><br>
+
+    <h3> <center> | 단어 카운트 | </center> </h3>
+    <!-- '단어' ~ '단어나온 횟수' -->
+    {% for word, countTotal in dictionary %}
+    <center>{{ word }} X {{ countTotal }}번 </center>
+    <br>
+    {% endfor %}
+</body>
+
+</html>

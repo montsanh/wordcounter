@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<head>
+    <style type="text/css">
+        body { background-color: #D7DBD1}
+    </style>
+</head>
+
+<body>
+    <h1> <center> WORD COUNT </center> </h1>
+
+    <a href="{% url 'about' %}"> <center> ABOUT </center> </a>
+    <br><br><br>
+
+    <center>
+    <form action="{% url 'count' %}">
+        <textarea cols="40" rows="10" name="fulltext"></textarea>
+        <br>
+        <input type="submit" value="Count!" />
+    </form>
+    </center>
+</body>
+
+</html>
